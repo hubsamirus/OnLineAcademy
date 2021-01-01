@@ -1,0 +1,50 @@
+.login-form {
+   background-color: #0000cc;
+   padding: 30px;
+   margin-top: 60px;
+   margin-bottom: 60px;
+   color: #fff;
+   border-radius: 10px;
+   box-shadow: 0 0 30px 0 #0000cc;
+   z-index: 10;
+   .invalid-feedback{
+       background:#c5c5dd;
+       padding: 5px;
+       font-size: 15px;
+       border-radius: 5px;
+       box-shadow: lightness($color: #000000);
+   }
+   .btn-block{
+       &:hover{
+           background-color: #ff9900;
+       }       
+   }
+    .sign-up-btn{
+        background-color: #ff9900;
+    }
+    .facebook-btn {
+        background-color: #0077e2;
+        color: #fff;
+        &:hover {
+            color: #0077e2 !important;
+            background-color: #fff;
+        }
+    }
+    .twitter-btn{
+            background-color: #00aced;
+            color: #fff;
+        &:hover {
+            background-color: #fff;
+            color: #00aced !important;
+        }
+    }
+    .text-center a,.link-register{
+        &:hover{
+            color: #fff !important;
+            text-decoration: none;
+        }
+    }
+    .link-register{
+
+    }
+}

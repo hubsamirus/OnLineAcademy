@@ -1,0 +1,107 @@
+@import "~font-awesome/css/font-awesome.css";   
+#myFooter {
+    background-color: #0000cc;
+	color: white;
+	flex: 0 0 auto;
+	-webkit-flex: 0 0 auto;
+	.row {
+		margin-bottom: 60px;
+	}
+	.info {
+		text-align: justify;
+		color: #afb0b1;
+	}
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+		line-height: 1.7;
+	}
+	h5 {
+		font-size: 18px;
+		color: white;
+		font-weight: bold;
+		margin-top: 30px;
+	}
+	.logo {
+		margin-top: 10px;
+	}
+	.second-bar {
+        box-sizing: border-box;
+		.logo {
+           float: left;
+		}
+		text-align: center;
+		background-color: #ff9900;
+		a {
+			font-size: 22px;
+			color: #9fa3a9;
+			padding: 10px;
+			transition: 0.2s;
+			line-height: 68px;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	a {
+		color: #d2d1d1;
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+			color: white;
+		}
+		&:focus {
+			text-decoration: none;
+			color: white;
+		}
+	}
+	.social-icons {
+       float: right;
+       margin-top: 30px; 
+    }
+    .clear{clear: both;}
+	.facebook {
+        font-size: 28px !important;
+		&:hover {
+			color: #0077e2 !important;
+		}
+	}
+	.google {
+          font-size: 28px !important;
+		&:hover {
+			color: #ef1a1a !important;
+		}
+	}
+	.twitter {
+          font-size: 28px !important;
+		&:hover {
+			color: #00aced !important;
+		}
+	}
+}
+html {
+	height: 100%;
+}
+body {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+	-webkit-flex: 1 0 auto;
+	min-height: 200px;
+}
+@media screen and (max-width: 767px) {
+	#myFooter {
+		text-align: center;
+		.info {
+			text-align: center;
+        }
+       	.social-icons {
+   float: none;
+    } 
+	}
+}

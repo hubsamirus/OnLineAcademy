@@ -1,0 +1,27 @@
+.register-form {
+   background-color: #0000cc;
+   padding: 30px;
+   margin-top: 60px;
+   margin-bottom: 60px;
+   color: #fff;
+   border-radius: 10px;
+   box-shadow: 3px 0px 30px 3px #0000cc;
+   .btn-block{
+       border-radius: 50px;
+       &:hover{
+           background-color: #ff9900;
+       }       
+   }
+    .form-check-label a{
+        &:hover{
+            color: #fff !important;
+            text-decoration: none;
+        }
+    }
+    .text-center a{
+        &:hover{
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}

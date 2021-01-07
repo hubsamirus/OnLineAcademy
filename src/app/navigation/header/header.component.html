@@ -4,36 +4,19 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="logo flex-row">
-        <a href="#" class="logo">
-            <img src="../../../assets/images/OnlineAcademyLogo.png" alt="" srcset="">
+        <a routerLink="/">
+            <img src="assets/images/OnlineAcademyLogo.png" alt="" srcset="">
         </a>
     </div>
-    <div class="flex-column">
-        <div class="search-panier">
-            <div class="search-engine">
-                <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2">
-                    <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
-                        aria-label="Search">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                </form>
-            </div>
-            <div class="panier">
-                <div class="navbar-nav ml-auto ">
-                    <div class="nav-item dropdown">
-                        <a href="#" data-toggle="dropdown" class="nav-link  mr-2">
-                            <img src="../../../assets/icons/shopping-bag.png" alt="" srcset="">
-                        </a>
-                        <div class="dropdown-menu action-form">
-                            <form action="/examples/actions/confirmation.php" method="post">
-                                <h3>your cart is empty !!</h3>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="flex-column search-navcenter">
+        <div class="search-engine">
+            <form class="form-inline d-flex space-right2">
+                <input class="form-control search"  type="text" placeholder="Search" aria-label="Search" >
+                <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+            </form>
         </div>
         <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ml-auto nav-fill">
+            <ul class="navbar-nav  nav-fill">
                 <li class="nav-item px-4">
                     <a href="#" class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
                 </li>
@@ -44,7 +27,7 @@
                     <div class="dropdown-menu dropdown-menu-center" aria-labelledby="trainingDropdown">
                         <div class="slogan">
                             <h4>Online Academey</h4>
-                          <h4>Serving all successes</h4>
+                        <h4>Serving all successes</h4>
                         </div>
                         <div class="dropdown-divider"></div>
                         <div class="d-md-flex align-items-start justify-content-start">
@@ -114,42 +97,63 @@
                     </div>
                 </li>
                 <li class="nav-item px-4">
+                    <a href="#" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item px-4">
                     <a href="#" class="nav-link" *ngIf="isAdmin">Manage Courses</a>
-                </li>
-              
-            </ul>
-            <ul class="navbar-nav login-register ">
-                <li class="nav-item ">
-                    <a  class="nav-link currentUser" *ngIf="!authenticationService.loggedIn()" routerLink="/login">
-                        Login / Register
-                    </a>                                
-                    <div class="nav-item dropdown" *ngIf="currentUser">
-                        <ul class="navbar-nav ">
-                            <!-- PROFILE DROPDOWN - scrolling off the page to the right -->
-                            <li>
-                                <a *ngIf="authenticationService.loggedIn() && !isAdmin" class="nav-link dropdown-toggle" id="navDropDownLink" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    {{currentUser.username}}
-                                </a>
-                                <div class="dropdown-menu profile" aria-labelledby="navDropDownLink">
-                                    <a class="dropdown-item" routerLink="/profile"><i class="fa fa-user" aria-hidden="true"></i>Profile</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#"><i class="fa fa-cog"
-                                            aria-hidden="true"></i>Preferences</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#"> <i class="fa fa-graduation-cap"
-                                            aria-hidden="true"></i> My Courses</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item"  (click)= "authenticationService.logout()"><i class="fa fa-sign-out"
-                                            aria-hidden="true"></i>Logout</a>
-                                </div>
-                            </li>
-                            <a class="nav-item nav-link" routerLink="/admin" *ngIf="authenticationService.loggedIn() && isAdmin">Admin</a>
-                            <a class="nav-item nav-link" *ngIf="isAdmin" (click)="authenticationService.logout()">Logout</a>
-                        </ul>
-                    </div>
-                </li>
+                </li>              
             </ul>
         </div>
+    </div>
+
+    <div class="flex-column panier-login">
+        <div class="panier">
+            <div class="navbar-nav ml-auto ">
+                <div class="nav-item dropdown">
+                    <a href="#" data-toggle="dropdown" class="nav-link  mr-2">
+                        <img src="assets/icons/shopping-bag.png" alt="" srcset="">
+                    </a>
+                    <div class="dropdown-menu action-form">
+                        <form action="/examples/actions/confirmation.php" method="post">
+                            <h3>your cart is empty !!</h3>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="navbar-nav login">
+            <li class="nav-item ">
+                <a  class="nav-link currentUser" *ngIf="!authenticationService.loggedIn()" routerLink="/login">
+                    Login / Register
+                </a>                                
+                <div class="nav-item dropdown" *ngIf="currentUser">
+                    <ul class="navbar-nav ">
+                        <!-- PROFILE DROPDOWN - scrolling off the page to the right -->
+                        <li>
+                            <a *ngIf="authenticationService.loggedIn() && !isAdmin" class="nav-link dropdown-toggle" id="navDropDownLink" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                {{currentUser.username}}
+                            </a>
+                            <div class="dropdown-menu profile" aria-labelledby="navDropDownLink">
+                                <a class="dropdown-item" routerLink="/profile"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-cog"
+                                        aria-hidden="true"></i> Preferences</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"> <i class="fa fa-graduation-cap"
+                                        aria-hidden="true"></i> My Courses</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"> <i class="fa fa-envelope" aria-hidden="true"></i> Message</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item"  (click)= "authenticationService.logout()"><i class="fa fa-sign-out"
+                                        aria-hidden="true"></i>Logout</a>
+                            </div>
+                        </li>
+                        <a class="nav-item nav-link" routerLink="/admin" *ngIf="authenticationService.loggedIn() && isAdmin">Admin</a>
+                        <a class="nav-item nav-link" *ngIf="isAdmin" (click)="authenticationService.logout()">Logout</a>
+                    </ul>
+                </div>
+            </li>
+        </ul>       
     </div>
 </nav>

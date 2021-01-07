@@ -1,4 +1,5 @@
 import express, {Application } from 'express';
+import bodyParser from 'body-parser';
 
 class Server {
     public app: Application;
@@ -8,6 +9,10 @@ class Server {
     }
     config(): void{
         this.app.set('port', process.env.PORT || 3000);
+        this.app.use(bodyParser.json());
+        this.app.set('Access-Control-Allow-Origin', '*');
+        this.app.set('Access-Control-Allow-Methods', 'GET, POST, PUT,DELETE');
+        this.app.set('Access-Control-Allow-Headers', 'Content-Type, Authorization ');
     }
     routes(): void{}
     start(): void{

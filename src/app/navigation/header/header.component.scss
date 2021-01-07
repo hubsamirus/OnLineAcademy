@@ -1,63 +1,38 @@
 @import "font-awesome/css/font-awesome.css";   
 .navbar {
+	height: 140px;
 	background-color: #fff !important;
 	box-shadow: 0 5px 5px 0 #ccc;
-	height: 140px;
 	text-transform: uppercase;
 	display: flex;
-	padding: 0 20px 0 20px;
+	justify-content:space-evenly;
 	.logo {
-		margin-left: 30px;
 		img {
 			width: 250px;
 			height: 110px;
 		}
 	}
 	.flex-column{
-		flex-direction: column;	
-		margin-left: 100px;
-		.search-panier{	
-			display: flex;
-			margin-left: -60px;
-			.search-engine{			
-				width: 80%;
-			}	
-			.panier{
-				margin-top: -10px;
-				margin-left: 160px;
-				img{
-					width: 40px;
-					height: 40px;
-				}			
-				.action-form {
-					width: 280px;
-					padding: 20px;
-					left: auto;
-					right: 0;
-					font-size: 14px;
-				}
+		flex-direction: column;
+	}
+	.search-navcenter{	
+		.search-engine{				
+			.search{
+				width: 600px !important;	
 			}
-		}
-		.navbar-collapse{
-			margin-left: -30px;
-			display: flex;
+			.fa-search{
+				color: #0000cc ;
+				margin-left: 5px;
+			}		
+		}	
+		.navbar-collapse{				
 			.nav-fill{
-				margin-right: 140px !important;
-			}		
-			.login-register a{
-				cursor: pointer;
-				border-radius: 50px;			
-			}
-			.profile i{
-				margin-right: 5px;				
-				&:hover{
-					color: #ff9900;
-				}
-			}		
+				margin-left: -30px;
+			}	
 			.dropdown-menu-center{
-				width: 1346px;
+				width: 1348px;
 				margin-top: 22px;
-				margin-left: -492px;
+				margin-left: -468px;
 				background-color: #eee;
 				border-top: 2px solid #0000cc;
 				.slogan{
@@ -70,10 +45,33 @@
 					white-space: nowrap;
 				}
 				a{
-					font-size: 14px;
+					font-size: 14px !important;
 				}
 			}
-			a {
+			a{
+				font-size: 17px;
+				font-weight: bold;
+				color: #0000cc;
+				&:hover{
+					background-color: #0000cc;
+					color: #fff;
+				}
+			}			
+			.pr-4, .px-4 {
+				padding-right: .1rem!important;
+			}
+		}
+	}
+	.panier-login{
+		margin-top: -18px;
+		.panier{
+			img{
+				width: 50px;
+				height: 50px;
+			}
+		}
+		.login{
+			a{
 				font-size: 17px;
 				font-weight: bold;
 				color: #0000cc;
@@ -82,38 +80,6 @@
 					color: #fff;
 				}
 			}
-			
-			.pr-4, .px-4 {
-				padding-right: .1rem!important;
-			}
-		
-			.action-form {
-				width: 280px;
-				padding: 20px;
-				left: auto;
-				right: 0;
-				font-size: 14px;
-			}
 		}
-	}
-	.sign-up-btn{
-		background-color: #ff9900;
-	}
-	.facebook-btn {
-		background-color: #0077e2;
-		color: #fff;
-		&:hover {
-			color: #0077e2 !important;
-			background-color: #fff;
-		}
-	}
-	.twitter-btn{
-		  background-color: #00aced;
-		  	color: #fff;
-		&:hover {
-			background-color: #fff;
-			color: #00aced !important;
-		}
-	}
-				
+	}				
 }
